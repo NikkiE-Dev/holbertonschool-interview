@@ -20,9 +20,9 @@ def canUnlockAll(boxes):
     if total == 0:
         return True
 
-    for i in matches:
-        for key in boxes[i]:
-            if key in matches:
+    for unit in matches:
+        for key in boxes[unit]:
+            if key in matches and key > total:
                 continue
             else:
                 matches.append(key)
