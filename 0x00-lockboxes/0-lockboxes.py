@@ -22,8 +22,8 @@ def canUnlockAll(boxes):
 
     for unit in matches:
         for key in boxes[unit]:
-            if key in matches and key > total:
-                continue
-            else:
+            if key not in matches and key < total:
                 matches.append(key)
+            else:
+                continue
     return len(matches) == total
