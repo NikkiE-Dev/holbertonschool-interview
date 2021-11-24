@@ -1,0 +1,1 @@
+In a text file, there is a single character H. This code is to calculates the fewest number of operations needed to result in proper number of H characters in the file using Copy All & Paste.
