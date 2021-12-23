@@ -10,7 +10,7 @@
 
 int is_palindrome(listint_t **head)
 {
-	if (*head == NULL)
+	if (!*head || !*head)
 		return (1);
 	else
 		return (palindrome_check(head, *head));
@@ -23,11 +23,14 @@ int is_palindrome(listint_t **head)
  * Return: 0 if it is not a palindrome, 1 if it is a palindrome
  */
 int palindrome_check(listint_t **initial, listint_t *reverse)
+{
+	if (!reverse || !*initial)
+		return (1);
+	if (palindrome_check(initial, reverse->next) && (*initial)->n == reverse->n)
 	{
-		if (reverse == NULL)
-			return (1);
-		if (reverse->n != (*initial)->n)
-			return (0);
 		*initial = (*initial)->next;
 		return (1);
 	}
+		else
+			return (0);
+}
