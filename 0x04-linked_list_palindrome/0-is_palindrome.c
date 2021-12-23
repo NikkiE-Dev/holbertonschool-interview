@@ -10,7 +10,7 @@
 
 int is_palindrome(listint_t **head)
 {
-	if (!*head || !*head)
+	if (!*head || !head)
 		return (1);
 	else
 		return (palindrome_check(head, *head));
