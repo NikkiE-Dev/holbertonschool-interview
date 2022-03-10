@@ -11,6 +11,8 @@ def rain(walls):
     frt_col = 0
     back_col = 0
 
+    if not walls:
+        return 0
     if len(walls) == 0:
         return 0
     for i in range(len(walls)):
