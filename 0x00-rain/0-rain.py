@@ -11,7 +11,7 @@ def rain(walls):
     frt_col = 0
     back_col = 0
 
-    if type(walls) is not walls:
+    if type(walls) is not list:
         return 0
     if len(walls) == 0:
         return 0
