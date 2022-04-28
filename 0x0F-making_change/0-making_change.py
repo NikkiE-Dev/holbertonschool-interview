@@ -29,4 +29,3 @@ def makeChange(coins, total):
         coin_list.append(item[1])
     num_of_coins = sum(coin_list)
     return num_of_coins
-
