@@ -1,33 +1,25 @@
-#!/usr/bin/python3
-"""
-Determine who wins when selecting primes and their multiples from a list of numbers
-"""
-
-
 def isWinner(x, nums):
     """
     Prime Game
     """
+    her = 0
+    him = 0
     s1 = "Maria"
     s2 = "Ben"
-    rounds = 0
 
-    if len(nums) == 0:
-        return None
-    if len(nums) == 1 and nums[0] == 1:
-        return None
-    for num in range(x):
-        rds = num if num < len(nums) - 1 else len(nums) - 1
-        if calc_multisets(nums[num]) == 1:
-            rounds += 1
+    for i in range(x):
+        rds = i if i < (len(nums) - 1) else (len(nums) - 1)
+        if calc_multisets(nums[rds]) == 1:
+            her += 1
         else:
-            rounds += 1
-    if rounds % 2 == 0:
+            him += 1
+    if him > her:
         return s2
-    elif rounds % 2 == 1:
+    elif her > him:
         return s1
     else:
-        return None
+        return "None"
+
 
 def calc_multisets(y):
     num_prime = 0
@@ -36,8 +28,9 @@ def calc_multisets(y):
             num_prime += 1
     return num_prime % 2
 
+
 def isPrime(a):
-    if a == 1:
+    if a == 1 or a == 0:
         return False
     for i in range(2, a):
         if a % i == 0:
