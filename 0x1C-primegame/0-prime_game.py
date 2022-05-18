@@ -1,3 +1,9 @@
+#!/usr/bin/python3
+"""
+Determine who wins when selecting primes and their multiples from a list of numbers
+"""
+
+
 def isWinner(x, nums):
     """
     Prime Game
