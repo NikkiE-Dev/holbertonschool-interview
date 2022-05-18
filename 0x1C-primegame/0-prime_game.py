@@ -13,7 +13,6 @@ def isWinner(x, nums):
     s1 = "Maria"
     s2 = "Ben"
 
-    
     for i in range(x):
         rds = i if i < (len(nums) - 1) else (len(nums) - 1)
         if calc_multisets(nums[rds]) == 1:
