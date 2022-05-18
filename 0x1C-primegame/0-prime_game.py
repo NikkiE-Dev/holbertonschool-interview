@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Determine who wins when selecting primes and their multiples from a list of numbers
+Find winnner when selecting primes and their multiples from a list of numbers
 """
 
 
@@ -13,6 +13,7 @@ def isWinner(x, nums):
     s1 = "Maria"
     s2 = "Ben"
 
+    
     for i in range(x):
         rds = i if i < (len(nums) - 1) else (len(nums) - 1)
         if calc_multisets(nums[rds]) == 1:
